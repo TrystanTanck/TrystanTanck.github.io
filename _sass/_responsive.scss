@@ -1,0 +1,97 @@
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+
+  .sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Hide sidebar off-screen */
+    width: 280px;
+    height: 100%;
+    background: #fff; /* Or your desired sidebar background */
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar-wrapper.active {
+    left: 0; /* Show sidebar */
+  }
+
+  .wrapper {
+    display: block;
+  }
+
+  .main-wrapper {
+    padding: 30px;
+  }
+
+  .main-wrapper .time {
+    position: static;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .main-wrapper .upper-row {
+    margin-bottom: 0;
+  }
+
+  .sidebar-toggle-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .sidebar-wrapper {
+    position: static; /* Ensure sidebar is visible and static on larger screens */
+    width: inherit;
+    box-shadow: none;
+  }
+  .sidebar-toggle-button {
+    display: none; /* Hide toggle button on larger screens */
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .skillset .level-title {
+    float: left;
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .skillset .level-bar {
+    width: 70%;
+    float: left;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.skillset .level-bar-inner {
+  width: auto;
+  -webkit-transition: width 2s ease-in-out;
+  -moz-transition: width 2s ease-in-out;
+  -o-transition: width 2s ease-in-out;
+  transition: width 2s ease-in-out;
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Ex-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+}

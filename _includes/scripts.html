@@ -1,0 +1,15 @@
+<!-- Javascript -->
+{% if site.analytics %} {% include analytics.html %} {% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+
+    if (sidebarToggle && sidebarWrapper) {
+      sidebarToggle.addEventListener('click', function() {
+        sidebarWrapper.classList.toggle('active');
+      });
+    }
+  });
+</script>
