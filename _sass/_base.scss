@@ -59,8 +59,8 @@ p {
     color: #fff;
   }
   .name {
-    font-size: 32px;
-    font-weight: 900;
+    font-size: 30px;
+    font-weight: 800;
     margin-top: 0;
     margin-bottom: 10px;
   }
@@ -83,7 +83,7 @@ p {
     border-radius: 100%;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
-  .contact-list {
+  .contact-list1 {
     .fas,
     .fab,
     .far {
@@ -92,9 +92,29 @@ p {
       vertical-align: middle;
     }
     li {
-      margin-bottom: 15px;
+      margin-bottom: 20px; /* Increased space between items */
       &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .contact-list2 {
+    display: flex; /* Enable Flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    padding: 0; /* Remove default padding from ul */
+    list-style: none; /* Remove bullet points */
+    .fas,
+    .fab,
+    .far {
+      margin-right: 5px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+    li {
+      margin-right: 12px; /* Increased horizontal space between items */
+      margin-bottom: 10px; /* Small vertical space for wrapping */
+      &:last-child {
+        margin-right: 0; /* No margin on the last item */
       }
     }
   }
@@ -135,6 +155,16 @@ p {
   .languages-container {
     .lang-desc {
       color: rgba(256, 256, 256, 0.6);
+    }
+    .star-rating {
+      display: inline-block;
+      margin-left: 5px;
+      .fas.fa-star {
+        color: #f8e825; /* Color for filled stars */
+      }
+      .far.fa-star {
+        color: rgba(255, 255, 255, 0.3); /* Color for empty stars */
+      }
     }
   }
 

@@ -10,7 +10,29 @@
     {% for language in languages.info %}
     <li>
       {{ language.idiom }}
-      <span class="lang-desc">({{ language.level }})</span>
+      <span class="star-rating">
+        {% assign rating = 0 %}
+        {% case language.level %}
+          {% when "Native" %}
+            {% assign rating = 5 %}
+          {% when "Professional Working Proficiency" %}
+            {% assign rating = 4 %}
+          {% when "Limited Working Proficiency" %}
+            {% assign rating = 3 %}
+          {% when "Elementary Proficiency" %}
+            {% assign rating = 2 %}
+          {% when "Basic" %}
+            {% assign rating = 1 %}
+        {% endcase %}
+
+        {% for i in (1..5) %}
+          {% if i <= rating %}
+            <i class="fas fa-star"></i>
+          {% else %}
+            <i class="far fa-star"></i>
+          {% endif %}
+        {% endfor %}
+      </span>
     </li>
     {% endfor %}
   </ul>
