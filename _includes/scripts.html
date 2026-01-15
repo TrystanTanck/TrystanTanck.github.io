@@ -2,14 +2,16 @@
 {% if site.analytics %} {% include analytics.html %} {% endif %}
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const sidebarToggle = document.getElementById('sidebarToggle');
-    const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebarCollapsibleContent = document.getElementById('sidebarCollapsibleContent');
 
-    if (sidebarToggle && sidebarWrapper) {
-      sidebarToggle.addEventListener('click', function() {
-        sidebarWrapper.classList.toggle('active');
-      });
-    }
-  });
+  if (sidebarToggle && sidebarCollapsibleContent) {
+    console.log('Sidebar toggle initialized');
+    sidebarToggle.addEventListener('click', function() {
+      console.log('Sidebar toggle clicked');
+      sidebarCollapsibleContent.classList.toggle('active');
+    });
+  } else {
+    console.log('Sidebar toggle elements not found', { sidebarToggle, sidebarCollapsibleContent });
+  }
 </script>

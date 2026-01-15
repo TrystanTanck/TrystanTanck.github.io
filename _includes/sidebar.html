@@ -15,19 +15,24 @@
     <h3 class="tagline">{{ sidebar.tagline }}</h3>
     {% endif %}
 
+    <button id="sidebarToggle" class="sidebar-toggle-button d-md-none">
+      <i class="fas fa-bars"></i> Contact & Education
+    </button>
   </div><!--//profile-container-->
 
-  {% include contact.html %}
+  <div id="sidebarCollapsibleContent" class="sidebar-collapsible-content">
+    {% include contact.html %}
 
-  {% if sidebar.education %}
-    {% include education.html %}
-  {% endif %}
+    {% if sidebar.education %}
+      {% include education.html %}
+    {% endif %}
 
-  {% include language.html %}
-  {% include interests.html %}
+    {% include language.html %}
+    {% include interests.html %}
 
-  {% if sidebar.about %}
-    {% include about.html %}
-  {% endif %}
+    {% if sidebar.about %}
+      {% include about.html %}
+    {% endif %}
+  </div>
 
-</div><!--//sidebar-wrapper-->
+</div>

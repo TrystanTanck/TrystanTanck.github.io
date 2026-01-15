@@ -2,6 +2,8 @@
 <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
 
+I use this theme to make my online CV. I have customized it to fit my needs. The part I customized is the sidebar. I added a toggle button to show and hide the sidebar when the screen size is smaller (mobile view).
+
 # Orbit
 > This theme is designed by Xiaoying Riley at [3rd Wave Media](http://themes.3rdwavemedia.com/).
 > Visit [her website](http://themes.3rdwavemedia.com/) for more themes.
